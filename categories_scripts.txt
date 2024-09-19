@@ -1,0 +1,13 @@
+INSERT INTO stock_management.categories (CategoryName, description) VALUES
+('Electronics', 'Devices and gadgets including smartphones, laptops, and more.'),
+('Home Appliances', 'Large and small appliances for household use.'),
+('Furniture', 'Various types of furniture for living, bedroom, and office.'),
+('Clothing & Accessories', 'Apparel, footwear, and fashion accessories for men, women, and children.'),
+('Health & Beauty', 'Products for personal care, skincare, and fitness.'),
+('Food & Beverages', 'Groceries, snacks, and drinks.'),
+('Toys & Games', 'Toys and games for children and adults.'),
+('Books & Media', 'Books, magazines, music, and movies.'),
+('Automotive', 'Cars, motorcycles, and automotive parts and accessories.'),
+('Sports & Outdoors', 'Equipment and gear for sports and outdoor activities.'),
+('Office Supplies', 'Stationery, office furniture, and other supplies.'),
+('Pet Supplies', 'Products for pet care, including food, toys, and grooming items.');

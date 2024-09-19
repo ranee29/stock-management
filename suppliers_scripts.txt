@@ -1,0 +1,13 @@
+-- Insert data into the suppliers table
+INSERT INTO stock_management.suppliers (SupplierName, ContactName, ContactEmail, PhoneNumber, Address, City, Country) VALUES
+('Manila Electronics Corp.', 'Juan Dela Cruz', 'juan.delacruz@manilaelectronics.ph', '+63-2-1234-5678', '1234 Rizal Avenue', 'Manila', 'Philippines'),
+('Philippine Green Solutions', 'Maria Santos', 'maria.santos@phgreen.sol', '+63-2-2345-6789', '5678 Green St.', 'Quezon City', 'Philippines'),
+('Pinoy Furniture Makers', 'Antonio Reyes', 'antonio.reyes@pinoyfurniture.ph', '+63-2-3456-7890', '9101 Makati Road', 'Makati', 'Philippines'),
+('Health First PH', 'Carmen Villanueva', 'carmen.villanueva@healthfirst.ph', '+63-2-4567-8901', '1212 Wellness Blvd', 'Pasig', 'Philippines'),
+('Global Foods PH', 'Luis Gomez', 'luis.gomez@globalfoods.ph', '+63-2-5678-9012', '3434 Market Lane', 'Taguig', 'Philippines'),
+('Toys & Fun PH', 'Isabel Rodriguez', 'isabel.rodriguez@toysandfun.ph', '+63-2-6789-0123', '4545 Play Ave', 'Cebu City', 'Philippines'),
+('Book Haven PH', 'Ricardo Cruz', 'ricardo.cruz@bookhaven.ph', '+63-32-7890-1234', '6767 Book St', 'Davao City', 'Philippines'),
+('Auto Parts PH', 'Angela Mendoza', 'angela.mendoza@autoparts.ph', '+63-2-7890-2345', '7878 Auto Drive', 'Iloilo City', 'Philippines'),
+('Sporting Goods PH', 'Benjamin Morales', 'benjamin.morales@sportinggoods.ph', '+63-2-8901-3456', '8989 Sports Way', 'Baguio City', 'Philippines'),
+('Office Supplies PH', 'Natalie Perez', 'natalie.perez@officesupplies.ph', '+63-2-9012-4567', '9090 Office Park', 'Cagayan de Oro', 'Philippines'),
+('Paws & Claws PH', 'Francisca Fernandez', 'francisca.fernandez@pawsandclaws.ph', '+63-2-0123-5678', '3232 Pet Blvd', 'Dumaguete City', 'Philippines');

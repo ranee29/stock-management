@@ -1,0 +1,71 @@
+CREATE DATABASE stock_management;
+
+USE stock_management;
+
+-- Table for product categories
+CREATE TABLE Categories (
+CategoryID INT AUTO_INCREMENT PRIMARY KEY,
+CategoryName VARCHAR(100) NOT NULL,
+Description TEXT
+);
+
+-- Table for suppliers
+CREATE TABLE Suppliers (
+SupplierID INT AUTO_INCREMENT PRIMARY KEY,
+SupplierName VARCHAR(100) NOT NULL,
+ContactName VARCHAR(100),
+ContactEmail VARCHAR(100),
+PhoneNumber VARCHAR(20),
+Address TEXT,
+City VARCHAR(50),
+Country VARCHAR(50)
+);
+
+-- Table for products
+CREATE TABLE Products (
+ProductID INT AUTO_INCREMENT PRIMARY KEY,
+ProductName VARCHAR(100) NOT NULL,
+CategoryID INT,
+SupplierID INT,
+UnitPrice DECIMAL(10, 2),
+StockQuantity INT,
+ReorderLevel INT,
+DateAdded DATE,
+FOREIGN KEY (CategoryID) REFERENCES Categories(CategoryID),
+FOREIGN KEY (SupplierID) REFERENCES Suppliers(SupplierID)
+);
+
+-- Table for purchases
+CREATE TABLE Purchases (
+PurchaseID INT AUTO_INCREMENT PRIMARY KEY,
+ProductID INT,
+SupplierID INT,
+PurchaseDate DATE,
+QuantityPurchased INT,
+UnitPrice DECIMAL(10, 2),
+TotalCost DECIMAL(10, 2),
+FOREIGN KEY (ProductID) REFERENCES Products(ProductID),
+FOREIGN KEY (SupplierID) REFERENCES Suppliers(SupplierID)
+);
+
+-- Table for sales
+CREATE TABLE Sales (
+SaleID INT AUTO_INCREMENT PRIMARY KEY,
+ProductID INT,
+SaleDate DATE,
+QuantitySold INT,
+UnitPrice DECIMAL(10, 2),
+TotalRevenue DECIMAL(10, 2),
+FOREIGN KEY (ProductID) REFERENCES Products(ProductID)
+);
+
+-- Table for stock movements
+CREATE TABLE StockMovements (
+MovementID INT AUTO_INCREMENT PRIMARY KEY,
+ProductID INT,
+MovementDate DATE,
+MovementType ENUM('Purchase', 'Sale', 'Adjustment') NOT NULL,
+Quantity INT,
+Description TEXT,
+FOREIGN KEY (ProductID) REFERENCES Products(ProductID)
+);
