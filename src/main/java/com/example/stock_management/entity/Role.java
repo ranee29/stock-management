@@ -9,9 +9,10 @@ import javax.persistence.*;
 @Getter
 @Setter
 @Table(name = "roles")
-public class Roles {
+public class Role {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    @Column(name = "name")
     private String name;
 }

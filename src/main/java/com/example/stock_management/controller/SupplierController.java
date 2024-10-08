@@ -1,7 +1,9 @@
 package com.example.stock_management.controller;
 
 import com.example.stock_management.entity.Categories;
-import com.example.stock_management.service.CategoryService;
+import com.example.stock_management.entity.Suppliers;
+import com.example.stock_management.repo.SuppliersRepo;
+import com.example.stock_management.service.SupplierService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,15 +15,14 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/category")
-public class CategoriesController {
+@RequestMapping("/supplier")
+public class SupplierController {
     @Autowired
-    private CategoryService categoryService;
+    private SupplierService supplierService;
 
     @PreAuthorize("hasRole('USER')")
     @GetMapping("/")
-    public ResponseEntity<List<Categories>> getAllCategories(){
-        return new ResponseEntity<List<Categories>>(categoryService.getAllCategories(), HttpStatus.OK);
+    public ResponseEntity<List<Suppliers>> getAllCategories(){
+        return new ResponseEntity<List<Suppliers>>(supplierService.getAllSupplier(), HttpStatus.OK);
     }
-
 }
